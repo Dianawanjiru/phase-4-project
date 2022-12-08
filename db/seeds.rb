@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+puts 'seeding posts...'
+
+Post.create(title: "Learn React Basics in 10 Minutes", image_url: "https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/intro-to-react.jpg", description: "This article aims to provide a beginner-friendly introduction to React, what it is, and why we need it. It assumes you have some understanding of basic JavaScript.
+
+We will discuss some of its basic concepts and go over what you can build with React.
+
+We will also discuss some code, but the overall goal is to gain an intuitive understanding of what React is all about so that you get comfortable with the basics.", user_id:1 )
+
+Post.create(title: "Why Choose React Over Javascript?", image_url: "https://www.interviewbit.com/blog/wp-content/uploads/2021/11/Node.js-vs-React.js-800x450.png", description: "The JS at the end of both Node and React relates to the JavaScript programming language. Both Node and React are JavaScript frameworks. Although the two languages may appear similar, they are entirely different.
+
+Some would even say that comparing node js and react js is akin to comparing tennis to badminton. Both of them work in completely different fields. The fundamental reason that comparing Node with React is unfair is that Node.js is a back-end framework, which means it was created to handle server-side computations. In the meantime, React.js was created to manage UI/UX (User Interface and User Experience). The differences, while noticeable, do not detract from the overwhelming strength and versatility that each of these frameworks provides to its respective domains. Another way to put it is that neither Node.js nor React.js can be used interchangeably at any point during your web development project.", user_id: 2)
+
+    Post.create(title: "Benefits of Ruby On Rails", image_url: "https://www.botreetechnologies.com/blog/wp-content/uploads/2021/10/benefits-of-ruby-on-rails-application-development.png", description: "Ruby on Rails is a popular web development technology. The open-source framework powers 3,986,500 websites over the web. Some of the biggest giants use the technology stack in their web applications. Rails-based web applications are highly robust, dynamic, and, most importantly – faster to build
+
+    That’s why Ruby on Rails app development is often the first choice of startups as well. IT reduces the application development time by 25% to 40%. The in-built modules, quickly configured development environment and easy syntax allow for rapid Ruby on Rails application development. 
+    
+    ", user_id:3)
+
+
+    puts 'seeding users...' 
+   User.create(username: "Diana", password_digest: "heyme", image_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2F308286-943399-raikfcquaxqncofqfm.stackpathdns.com%2Fwp-content%2Fuploads%2F2022%2F04%2Fpic-whatsapp-profile-flowers-dp.png&imgrefurl=https%3A%2F%2Fversionweekly.com%2Fnews%2Fwhatsapp%2Fwhatsapp-profile-flowers-dp%2F&tbnid=jUY026wvOHUsxM&vet=12ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygEegUIARDlAQ..i&docid=BKvWqfyPYQROiM&w=800&h=800&q=profile%20whatsapp%20dp%20images&ved=2ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygEegUIARDlAQ", specialization: "I specialize in React js, Ruby, Ruby on rails, Javascript, HTML and CSS")
+   User.create(username: "Zuri", password_digest: "iamawesome", image_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D156624023612776&imgrefurl=https%3A%2F%2Fm.facebook.com%2FWhatsApp-Profile-Picture-And-Status-Words-2213282868983776%2Fphotos%2F&tbnid=lqvhrB-1mQTwtM&vet=12ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygGegUIARDpAQ..i&docid=4cjdmN8SF3H1MM&w=640&h=640&q=profile%20whatsapp%20dp%20images&ved=2ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygGegUIARDpAQ", specialization: "I specialize in React js, Ruby, Ruby on rails, Javascript, HTML and CSS")
+   User.create(username: "Ethan", password_digest: "kickass", image_url: "https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.goodmorningimagesdownload.com%2Fwp-content%2Fuploads%2F2020%2F11%2FCute-Profile-Whatsapp-DP-Images-22.jpg&imgrefurl=http%3A%2F%2Fwww.goodmorningimagesdownload.com%2Fcute-profile-whatsapp-dp-wallpaper-download%2F&tbnid=Oez21-fLp8qOOM&vet=12ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygNegUIARD3AQ..i&docid=Z8R036QdzYN7hM&w=1077&h=1178&q=profile%20whatsapp%20dp%20images&ved=2ahUKEwiCjtyKher7AhW5gc4BHSrYD60QMygNegUIARD3AQ", specialization: "I specialize in React js, Ruby, Ruby on rails, Javascript, HTML and CSS")

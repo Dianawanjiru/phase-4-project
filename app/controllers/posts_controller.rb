@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :valid_user
+    rescue_from ActiveRecord::RecordNotFound, with: :power_not_found
     before_action :authorize
     skip_before_action :authorize, only:[:index]
     def index
@@ -48,5 +49,9 @@ class PostsController < ApplicationController
 
     def valid_user(valid)
         render json: {errors: valid.record.errors.full_messages}, status: :unprocessable_entity
+    end
+
+    def post_not_found
+        render json: {error: "post not found"}, status: :not_found
     end
 end
