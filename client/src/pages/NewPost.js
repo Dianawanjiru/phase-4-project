@@ -69,7 +69,7 @@ return(
           <Label htmlFor="description">Description</Label>
           <Textarea
             id="description"
-            rows="20"
+            rows="6"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />

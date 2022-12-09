@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./pages/Login";
 import NewPost from "./pages/NewPost";
 import PostList from "./pages/PostList";
-import footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App (){
   const [user, setUser] = useState(null)
@@ -34,6 +34,7 @@ function App (){
           </Routes>
         </Router>
       </main>
+      <Footer/>
     </div>
   );
 }

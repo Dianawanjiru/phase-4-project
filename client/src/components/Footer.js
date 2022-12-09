@@ -1,6 +1,6 @@
 
-import "./footer.css";
-function footer(){
+import "../styles/Footer.css";
+function Footer(){
 
     return(
         <section id="footer">
@@ -14,9 +14,7 @@ function footer(){
                 <div class="social-item">
                     <a href="#" class="social-item"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
                 </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
+                
                 <div class="social-item">
                     <a href="#" class="social-item"><img src="https://img.icons8.com/bubbles/100/000000/behance.png"/></a>
                 </div>
@@ -28,4 +26,4 @@ function footer(){
      </section>
     )
 }
-export default footer;
+export default Footer;
