@@ -27,9 +27,10 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        post = post.find_by(id: params[:id])
+        post = Post.find_by(id: params[:id])
         post.destroy
-        head :no_content
+        render json: {}
+        
     end
 
 
