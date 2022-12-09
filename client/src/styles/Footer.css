@@ -5,9 +5,10 @@
 #footer .footer{
     min-height: 200px;
     flex-direction: row;
-    padding-top: 50px;
-    padding-bottom: 10px;
-   color: brown;
+   
+    
+    padding-bottom:30px;
+   
     
 }
 #footer h2{
@@ -46,4 +47,5 @@
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
+
 

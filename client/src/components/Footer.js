@@ -3,8 +3,9 @@ import "../styles/Footer.css";
 function Footer(){
 
     return(
-        <section id="footer">
-        <div class="footer container">
+    <section id="footer">
+        
+            <div class="footer-container">
             <div class="brand"><h1><span>D</span>iana <span>W</span>anjiru</h1></div>
             <h2>Your Complete Web Solution</h2>
             <div class="social-icon">
@@ -23,6 +24,7 @@ function Footer(){
             <p>copyright @ 2020 Diana. All rights reserved</p>
 
         </div>
+        
      </section>
     )
 }

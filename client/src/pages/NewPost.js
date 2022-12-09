@@ -5,7 +5,10 @@ import  "../styles/Image.css";
 import styled from "styled-components";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles/Index";
 
-function NewPost({user}){
+function NewPost({user, }){
+
+    
+
     const [title, setTitle] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [description, setDescription] = useState("");
@@ -80,6 +83,11 @@ return(
           </Button>
         </FormField>
         <FormField>
+          <Button color="primary" type="submit" onDelete={onDelete}>
+            Delete Post
+          </Button>
+        </FormField>
+        <FormField>
           {errors.map((err) => (
             <Error key={err}>{err}</Error>
           ))}
@@ -107,6 +115,7 @@ gap: 24px;
 
 const WrapperChild = styled.div`
 flex: 1;
+
 `;
 
 
