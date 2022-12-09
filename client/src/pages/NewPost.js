@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles/Index";
 
-function NewRecipe({user}){
+function NewPost({user}){
     const [title, setTitle] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [description, setDescription] = useState("");
@@ -24,7 +24,7 @@ function NewRecipe({user}){
                 title,
                 image_url: imageUrl,
                 description,
-                user_id,
+               
             }),
 
         }).then((r)=>{
@@ -89,7 +89,7 @@ return(
       <h1>{title}</h1>
       
         <p>
-            <em>Image: {post.image_url}</em>
+            <em>Image: {imageUrl}</em>
             &nbsp;·&nbsp;
             <cite>By {user.username}</cite>
         </p>
@@ -113,4 +113,4 @@ flex: 1;
 `;
 
 
-export default NewRecipe;
+export default NewPost;

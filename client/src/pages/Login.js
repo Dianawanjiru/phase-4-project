@@ -2,14 +2,14 @@ import { useState } from "react";
 import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
-import { Button } from "../styles";
+import { Button } from "../styles/Index";
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
     <Wrapper>
-      <Logo>Reciplease</Logo>
+      <Logo>Learn Tech</Logo>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />

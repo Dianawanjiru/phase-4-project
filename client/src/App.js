@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Login from "./pages/Login";
 import NewPost from "./pages/NewPost";
 import PostList from "./pages/PostList";
 
@@ -21,16 +22,14 @@ function App (){
 
   return(
     <>
-      <NavBar user={user} setUser={setUser} />
+     
       <main>
         <Router>
+        <NavBar user={user} setUser={setUser} />
           <Routes>
-          <Route path="/new">
-            <NewPost user={user} />
-          </Route>
-          <Route path="/">
-            <PostList />
-          </Route>
+          <Route exact path="/new" element={<NewPost user={user} />}/>
+          <Route exact path="/" element={<PostList />} />
+        
           </Routes>
         </Router>
       </main>
