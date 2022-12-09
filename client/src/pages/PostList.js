@@ -42,7 +42,7 @@ import {Delete} from "./PostCrud";
               <h2>{post.title}</h2>
               <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
-              <Button type="submit" color="primary" onClick={() =>onDelete(post.id)} >Delete Post</Button>
+              <Button type="button" color="primary" onClick={() =>onDelete(post.id)} >Delete Post</Button>
               
             </Box>
             

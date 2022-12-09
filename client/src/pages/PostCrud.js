@@ -1,9 +1,8 @@
 
 
 export function Delete(id){
-  return fetch(`/posts/${id}`, {
-    method: "DELETE",
-  
-  }).then((res)=>res.json())
+	return fetch(`/products/${id}` ,{
+		method : "DELETE",
+	}).then((resp) => resp.json()) 
 }
 
