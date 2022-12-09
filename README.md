@@ -10,10 +10,12 @@ technique while studying has been found to be very helful since everutime you ge
 * Rails
 * Java script
 * PostgresQl
+* Css
+*HTML
 
 # Log In Details
-Username: Kaleb
-PassWord: 1234
+Username: Kimkim
+PassWord: 0000
 
 # Functionalities
 As a user, I am able to:
