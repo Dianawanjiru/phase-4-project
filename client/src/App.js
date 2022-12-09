@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Login from "./components/Login";
+import Login from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NewPost from "./pages/NewPost";

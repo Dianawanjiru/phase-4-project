@@ -22,6 +22,7 @@ import { Box, Button } from "../styles";
               <h2>{post.title}</h2>
               <p>
                 <em>Image: {post.image_url}</em>
+                &nbsp;·&nbsp;
                 <cite>By {post.user.username}</cite>
               </p>
               <ReactMarkdown>{post.description}</ReactMarkdown>

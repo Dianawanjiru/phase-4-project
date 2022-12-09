@@ -4,13 +4,12 @@ import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles/Index";
 
-function NewRecipe(){
+function NewRecipe({user}){
     const [title, setTitle] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [description, setDescription] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [errors, setErrors] = useState([]);
-    const [user_id, setUserId ] = useState(0);
     const navigate = useNavigate();
 
     function handleSubmit(e){
@@ -66,17 +65,17 @@ return(
           />
         </FormField>
         <FormField>
-          <Label htmlFor="description">Instructions</Label>
+          <Label htmlFor="description">Description</Label>
           <Textarea
-            id="instructions"
-            rows="10"
-            value={instructions}
-            onChange={(e) => setInstructions(e.target.value)}
+            id="description"
+            rows="20"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </FormField>
         <FormField>
           <Button color="primary" type="submit">
-            {isLoading ? "Loading..." : "Submit Recipe"}
+            {isLoading ? "Loading..." : "Submit Post"}
           </Button>
         </FormField>
         <FormField>
@@ -88,12 +87,14 @@ return(
     </WrapperChild>
     <WrapperChild>
       <h1>{title}</h1>
-      <p>
-        <em>Time to Complete: {minutesToComplete} minutes</em>
-        &nbsp;·&nbsp;
-        <cite>By {user.username}</cite>
-      </p>
-      <ReactMarkdown>{instructions}</ReactMarkdown>
+      
+        <p>
+            <em>Image: {post.image_url}</em>
+            &nbsp;·&nbsp;
+            <cite>By {user.username}</cite>
+        </p>
+      
+      <ReactMarkdown>{description}</ReactMarkdown>
     </WrapperChild>
   </Wrapper>
 );
