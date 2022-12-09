@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Login from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NewPost from "./pages/NewPost";
@@ -21,24 +20,22 @@ function App (){
   if (!user) return <Login onLogin={setUser} />;
 
   return(
-    <div>
-      <NavBar user={user} setUser={setUser}/>
-      <Router>
-        <Routes>
-      <Route path="/new">
-        <NewPost/>
-
-      </Route>
-      <Route path="/">
-        <PostList/>
-      </Route>
-      
-      <Login/>
-      </Routes>
-     </Router>
-    </div>
-  )
-
+    <>
+      <NavBar user={user} setUser={setUser} />
+      <main>
+        <Router>
+          <Routes>
+          <Route path="/new">
+            <NewPost user={user} />
+          </Route>
+          <Route path="/">
+            <PostList />
+          </Route>
+          </Routes>
+        </Router>
+      </main>
+    </>
+  );
 }
 
 export default App;
