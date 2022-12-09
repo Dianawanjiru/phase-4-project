@@ -57,14 +57,14 @@ function Login({onLogin}) {
               />
             </FormField>
             <FormField>
-              <Button variant="fill" color="primary" type="button">
+              <Button variant="fill" color="primary" type="submit">
                 {isLoading ? "Loading..." : "Login"}
               </Button>
               <p> Don't have an account?
 
                 <br></br>
 
-                <Button type="button"  className='btn btn-success' onClick={()=>{setShowLogIn(false)}}> Sign Up</Button>
+                <Button type="submit"  className='btn btn-success' onClick={()=>{setShowLogIn(false)}}> Sign Up</Button>
               </p>
             </FormField>
             <FormField>

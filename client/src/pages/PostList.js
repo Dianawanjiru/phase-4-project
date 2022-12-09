@@ -2,18 +2,20 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
+import "./styles/Image";
 import styled from "styled-components";
 import { Box, Button } from "../styles/Index";
 
  function PostList(){
-    const [posts, setposts] = useState([]);
+    const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     fetch("/posts")
       .then((r) => r.json())
-      .then(setposts);
+      .then(setPosts);
   }, []);
-
+  console.log(setPosts);
+  console.log("posts",posts)
   return (
     <Wrapper>
       {posts.length > 0 ? (
@@ -21,7 +23,7 @@ import { Box, Button } from "../styles/Index";
           <Post key={post.id}>
             <Box>
               <h2>{post.title}</h2>
-              <p>{post.imageUrl}</p>
+              <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
             </Box>
           </Post>

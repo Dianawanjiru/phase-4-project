@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :valid_user
-    rescue_from ActiveRecord::RecordNotFound, with: :power_not_found
+    rescue_from ActiveRecord::RecordNotFound, with: :post_not_found
     before_action :authorize
     skip_before_action :authorize, only:[:index, :show]
     def index

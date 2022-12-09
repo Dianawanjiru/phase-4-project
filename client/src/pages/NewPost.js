@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import  "./styles/Image";
 import styled from "styled-components";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles/Index";
 
@@ -22,7 +23,7 @@ function NewPost({user}){
             },
             body: JSON.stringify({
                 title,
-                image_url: imageUrl,
+                image_url:imageUrl,
                 description,
                
             }),
@@ -88,7 +89,7 @@ return(
     <WrapperChild>
       <h1>{title}</h1>
       
-       
+       <p >{imageUrl}</p>
       <ReactMarkdown>{description}</ReactMarkdown>
     </WrapperChild>
   </Wrapper>
