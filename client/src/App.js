@@ -5,12 +5,11 @@ import Login from "./pages/Login";
 import NewPost from "./pages/NewPost";
 import PostList from "./pages/PostList";
 import Footer from "./components/Footer";
-import PostItem from "./pages/PostItem";
 
 function App (){
   const [user, setUser] = useState(null)
 
-  const [posts, setPosts] = useState([])
+ 
 
   
 
@@ -25,19 +24,7 @@ function App (){
 
     
 
-    function handleUpdatePost(updatedPost) {
-      setPosts((posts) =>
-        posts.map((post) => {
-          return post.id === updatedPost.id ? updatedPost : post;
-        })
-      );
-    }
-
-    function handleDeletePost(deletedPost) {
-      setPosts((posts) =>
-        posts.filter((post) => post.id !== deletedPost.id)
-      );
-    }
+    
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -52,16 +39,8 @@ function App (){
           <Route exact path="/" element={<PostList />} />
           </Routes>
         </Router>
-        <section className="spice-list">
-          {posts.map((post) => (
-            <PostItem
-              key={post.id}
-              post={post}
-              onUpdatePost={handleUpdatePost}
-              onDeletePost={handleDeletePost}
-            />
-          ))}
-        </section>
+        
+        
       </main>
       <Footer/>
     </div>

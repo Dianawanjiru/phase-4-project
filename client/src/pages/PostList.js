@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import { Box, Button } from "../styles/Index";
+import {Delete} from "./PostCrud";
 
- function PostList(){
+ function PostList({update}){
     const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,6 +19,16 @@ import { Box, Button } from "../styles/Index";
   console.log(setPosts);
   console.log("posts",posts)
 
+  function onDelete(id) {
+    Delete(id).then(resp => {
+      const index = posts.findIndex(r => r.id === id);
+      console.log(index)
+      let latestUpdate = [...posts];
+      latestUpdate.splice(index, 1);
+      setPosts(latestUpdate);
+    })
+  }  
+
   
 
   
@@ -27,11 +38,15 @@ import { Box, Button } from "../styles/Index";
         posts.map((post) => (
           <Post key={post.id}>
             <Box>
+               
               <h2>{post.title}</h2>
               <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
-              <Button type="button" color="primary"  >Delete Post</Button>
+              <Button type="delete" color="primary" onClick={() =>onDelete(post.id)} >Delete Post</Button>
+              <Button color="primary" type="update" onClick={() => update(post)}>Update</Button>
+              
             </Box>
+            
           </Post>
         ))
       ) : (
@@ -53,10 +68,11 @@ const Wrapper = styled.section`
 `;
 
 const Post = styled.article`
-  margin-bottom: 24px;
-`;
+ margin-bottom: 24px;
   
-
+`;
+    
+  
  
 
  export default PostList;
