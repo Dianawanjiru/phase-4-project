@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :valid_user
     rescue_from ActiveRecord::RecordNotFound, with: :power_not_found
     before_action :authorize
-    skip_before_action :authorize, only:[:index]
+    skip_before_action :authorize, only:[:index, :show]
     def index
         posts = Post.all
         render json: posts, status: :ok

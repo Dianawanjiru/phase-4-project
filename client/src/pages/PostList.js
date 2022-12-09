@@ -21,11 +21,7 @@ import { Box, Button } from "../styles/Index";
           <Post key={post.id}>
             <Box>
               <h2>{post.title}</h2>
-              <p>
-                <em>Image: {post.image_url}</em>
-                &nbsp;·&nbsp;
-                <cite>By {post.user.username}</cite>
-              </p>
+              <p>{post.imageUrl}</p>
               <ReactMarkdown>{post.description}</ReactMarkdown>
             </Box>
           </Post>

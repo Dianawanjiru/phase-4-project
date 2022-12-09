@@ -56,7 +56,7 @@ return(
           />
         </FormField>
         <FormField>
-          <Label htmlFor="imageUrl">Image</Label>
+          <Label htmlFor="imageUrl">Post Image</Label>
           <Input
             type="text"
             id="imageUrl"
@@ -88,12 +88,7 @@ return(
     <WrapperChild>
       <h1>{title}</h1>
       
-        <p>
-            <em>Image: {imageUrl}</em>
-            &nbsp;·&nbsp;
-            <cite>By {user.username}</cite>
-        </p>
-      
+       
       <ReactMarkdown>{description}</ReactMarkdown>
     </WrapperChild>
   </Wrapper>
