@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Box, Button } from "../styles/Index";
 import {Delete} from "./PostCrud";
 
- function PostList({update}){
+ function PostList(){
     const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ import {Delete} from "./PostCrud";
               <h2>{post.title}</h2>
               <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
-              <Button type="delete" color="primary" onClick={() =>onDelete(post.id)} >Delete Post</Button>
+              <Button type="submit" color="primary" onClick={() =>onDelete(post.id)} >Delete Post</Button>
               
             </Box>
             
