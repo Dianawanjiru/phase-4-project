@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-markdown": "^8.0.4",
     "styled-components": "^5.3.6"
   }
 }

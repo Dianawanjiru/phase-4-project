@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Login from "./components/Login";
 import NavBar from "./components/NavBar";
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import NewPost from "./pages/NewPost";
+import PostList from "./pages/PostList";
 
 function App (){
   const [user, setUser] = useState(null)
@@ -20,9 +22,19 @@ function App (){
 
   return(
     <div>
-      <Router>
       <NavBar user={user} setUser={setUser}/>
-     <Login/>
+      <Router>
+        <Routes>
+      <Route path="/new">
+        <NewPost/>
+
+      </Route>
+      <Route path="/">
+        <PostList/>
+      </Route>
+      
+      <Login/>
+      </Routes>
      </Router>
     </div>
   )
