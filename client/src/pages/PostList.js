@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles/Index";
 
- function PostList({onDeletedPost}){
+ function PostList(){
     const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -20,15 +20,7 @@ import { Box, Button } from "../styles/Index";
 
   
 
-  function handleDeletePost() {
-      fetch(`/spices/${id}`, {
-        method: "DELETE",
-      }).then((r) => {
-        if (r.ok) {
-          onDeletedPost();
-        }
-      });
-    }
+  
   return (
     <Wrapper>
       {posts.length > 0 ? (
@@ -38,7 +30,7 @@ import { Box, Button } from "../styles/Index";
               <h2>{post.title}</h2>
               <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
-              <Button type="button" color="primary" onClick={handleDeletePost} >Delete Post</Button>
+              <Button type="button" color="primary"  >Delete Post</Button>
             </Box>
           </Post>
         ))
