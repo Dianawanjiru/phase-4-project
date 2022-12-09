@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import  "./styles/Image";
+import  "../styles/Image.css";
 import styled from "styled-components";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles/Index";
 
@@ -102,6 +102,7 @@ margin: 40px auto;
 padding: 16px;
 display: flex;
 gap: 24px;
+
 `;
 
 const WrapperChild = styled.div`

@@ -8,6 +8,7 @@ function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
+    <div className="container">
     <Wrapper>
       <Logo>Learn Tech</Logo>
       {showLogin ? (
@@ -34,13 +35,14 @@ function Login({ onLogin }) {
         </>
       )}
     </Wrapper>
+    </div>
   );
 }
 
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color: blue;
   margin: 8px 0 16px;
 `;
 
@@ -48,6 +50,7 @@ const Wrapper = styled.section`
   max-width: 500px;
   margin: 40px auto;
   padding: 16px;
+  
 `;
 
 const Divider = styled.hr`

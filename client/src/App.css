@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.container {
+  background-image: url("https://pixabay.com/photos/cat-flower-kitten-stone-pet-2536662/");
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

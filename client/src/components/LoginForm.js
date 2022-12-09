@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Button, Error, Input, FormField, Label } from "../styles/Index";
-import SignUpForm from './SignUpForm';
+import "../styles/Image.css"
 
 
 function Login({onLogin}) {
@@ -8,8 +8,7 @@ function Login({onLogin}) {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [showLogIn, setShowLogIn] = useState(true);
-
+  
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -33,7 +32,7 @@ function Login({onLogin}) {
   return (
     <div>
         {
-          showLogIn ? (
+          
 
             <form onSubmit={handleSubmit} >
             <FormField>
@@ -60,12 +59,7 @@ function Login({onLogin}) {
               <Button variant="fill" color="primary" type="submit">
                 {isLoading ? "Loading..." : "Login"}
               </Button>
-              <p> Don't have an account?
-
-                <br></br>
-
-                <Button type="submit"  className='btn btn-success' onClick={()=>{setShowLogIn(false)}}> Sign Up</Button>
-              </p>
+             
             </FormField>
             <FormField>
               {errors?.map((err) => (
@@ -74,9 +68,7 @@ function Login({onLogin}) {
             </FormField>
           </form>
 
-          ) : (
-            <SignUpForm  onLogin={onLogin}/>
-          )
+          
      }
 
 
