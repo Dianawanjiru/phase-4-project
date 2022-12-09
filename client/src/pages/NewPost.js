@@ -82,11 +82,8 @@ return(
             {isLoading ? "Loading..." : "Submit Post"}
           </Button>
         </FormField>
-        <FormField>
-          <Button color="primary" type="submit" onDelete={onDelete}>
-            Delete Post
-          </Button>
-        </FormField>
+        
+        
         <FormField>
           {errors.map((err) => (
             <Error key={err}>{err}</Error>

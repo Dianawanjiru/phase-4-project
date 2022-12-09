@@ -10,7 +10,7 @@ import PostItem from "./pages/PostItem";
 function App (){
   const [user, setUser] = useState(null)
 
-  const [posts, setPosts] = useState{[]}
+  const [posts, setPosts] = useState([])
 
   
 
@@ -23,11 +23,7 @@ function App (){
     });
   },[]);
 
-    useEffect(()=>{
-      fetch("/posts")
-      .then((r)=>r.json())
-      .then(setPosts)
-    },[]);
+    
 
     function handleUpdatePost(updatedPost) {
       setPosts((posts) =>
@@ -52,12 +48,12 @@ function App (){
         <Router>
         <NavBar user={user} setUser={setUser} />
           <Routes>
-          <Route exact path="/new" element={<NewPost user={user} onDelete={handleDelete}/>}/>
+          <Route exact path="/new" element={<NewPost user={user} />}/>
           <Route exact path="/" element={<PostList />} />
           </Routes>
         </Router>
         <section className="spice-list">
-          {spices.map((post) => (
+          {posts.map((post) => (
             <PostItem
               key={post.id}
               post={post}

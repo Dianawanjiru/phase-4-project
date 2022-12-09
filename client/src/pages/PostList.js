@@ -14,6 +14,7 @@ import { Box, Button } from "../styles/Index";
       .then((r) => r.json())
       .then(setPosts);
   }, []);
+  
   console.log(setPosts);
   console.log("posts",posts)
   return (
@@ -25,6 +26,7 @@ import { Box, Button } from "../styles/Index";
               <h2>{post.title}</h2>
               <img className='post-image' src={post.image_url} alt='post' />
               <ReactMarkdown>{post.description}</ReactMarkdown>
+              <Button type="button" color="primary"  >Delete Post</Button>
             </Box>
           </Post>
         ))
